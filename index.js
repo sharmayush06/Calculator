@@ -1,17 +1,17 @@
 const display=document.getElementById("output");
-function percent(value){
-    display.value+=value;
+function press(innerText){
+    display.innerText+=innerText;
 }
 function clearDisplay(){
-    display.value="";
+    display.innerText="";
 }
 function pop(){
-    display.value=display.value.slice(0,display.value.length-1);
+    display.innerText=display.innerText.slice(0,display.innerText.length-1);
 }
 function calculate() {
   try {
-    display.value = eval(display.value);
+    display.innerText = eval(display.innerText);
   } catch {
-    display.value = "Error";
+    display.innerText = "Error";
   }
 }
